@@ -1,0 +1,57 @@
+.container {
+    background-color: #ccc;
+    height: 500px;
+    display: flex;
+    flex-direction: row; /* row | column | row-reverse | column-reverse */
+
+    flex-wrap: nowrap; /* wrap | nowrap | wrap-reverse */
+
+    /*flex-flow: row wrap-reverse; /* flex-direction flex-wrap */
+
+    /* Alinhamento horizontal */
+    justify-content: flex-start; /* flex-start | center | flex-end | space-between | space-around*/
+
+    /* Alinhamento vertical dos itens */
+    /* stretch - estica todos os conteudos para caber na altura inteira. */
+    /* baseline - alinha pelo conteudo. */
+    align-items: stretch; /* stretch | flex-start | center | flex-end | baseline */
+
+    /*Alinhamento Vertical quando tiver uma quebra nos itens */
+    /* stretch - funciona mas precisa que o item não tenha tamanho vertical atribuido. Prestar atencao no caso do align-items estar como stretch tambem */
+    align-content: stretch; /* flex-start | center | flex-end | space-between | space-around | stretch */
+
+}
+
+.item {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    height: 30px;
+
+    /* esta relaciona a largura do item, quanto um item vai ocupar. proporcao de tamanho */
+    flex-grow: 1;
+    /* a proporcao de diminuicao */
+    flex-shrink: 1;
+    /* valor inicial tamanho em largura */
+    flex-basis: 300px;
+}
+
+.article-01{
+    /* order: 3; */
+    flex-shrink: 3;
+}
+
+.article-02{
+    /* order: 1; */
+    align-self: auto; /* auto | flex-start | center | flex-end | baseline | stretch */
+}
+
+.article-03{
+    /* order: 2; */
+    flex: 5 3 200px; /* flex-grow flex-shrink flex-basis */
+}
+
+.article-04{
+    /* order: 4; */
+}
